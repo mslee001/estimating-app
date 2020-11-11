@@ -1,0 +1,28 @@
+{
+  "name": "estimating-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mslee001/estimating-app.git"
+  },
+  "author": "mslee001",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mslee001/estimating-app/issues"
+  },
+  "homepage": "https://github.com/mslee001/estimating-app#readme",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "handlebars": "^4.7.6",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0"
+  }
+}
