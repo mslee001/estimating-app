@@ -1,10 +1,18 @@
 module.exports = function(sequelize,DataTypes) {
     var Customer = sequelize.define("Customer", {
-        name: {
+        firstName: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        lastName: {
             type: DataTypes.STRING,
             allowNull: false
         },
         street_address: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        address2: {
             type: DataTypes.STRING,
             allowNull: false
         },
