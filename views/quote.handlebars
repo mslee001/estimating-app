@@ -1,0 +1,115 @@
+{{!-- Preparer Form --}}
+<div class="container-fluid">
+    <div class="card mt-2">
+        <div class="card-header">
+            <h4 class="card-title text-center">Prepare Quote</h5>
+        </div>
+        <div class="card-body">
+            <form class="container p-3"
+                  id="add-quote">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCustomer">Select Customer</label>
+                        <select id="selectCustomer"
+                                class="form-control">
+                                <option selected>Choose...</option>
+                            {{#each customers}}
+                            <option value={{id}}>{{firstName}} {{lastName}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPreparer">Select Preparer</label>
+                        <select id="selectPreparer"
+                                class="form-control">
+                                <option selected>Choose...</option>
+                            {{#each preparers}}
+                            <option value={{id}}>{{firstName}} {{lastName}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputProjectSummary">Project Summary</label>
+                    <textarea class="form-control" id="inputProjectSummary"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputRoom">Type of Room</label>
+                    <input type="text"
+                           class="form-control"
+                           id="inputRoom"
+                           placeholder="Bedroom 1, Bathroom, Kitchen, etc">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputPaint">Type of Paint</label>
+                        <select id="inputPaint"
+                                class="form-control">
+                            <option selected>Choose...</option>
+                            <option value="Eminence Ceiling - Acrylic Latex">Eminence Ceiling - Acrylic Latex</option>
+                            <option value="SuperPaint - Acrylic Latex">SuperPaint - Acrylic Latex</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputSheen">Paint Sheen</label>
+                        <select id="inputSheen"
+                                class="form-control">
+                            <option selected>Choose...</option>
+                            <option value="Flat">Flat</option>
+                            <option value="Satin">Satin</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputColor">Paint Color</label>
+                        <input type="text"
+                               class="form-control"
+                               id="inputColor">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputCoats">Paint / Primer Coats</label>
+                        <input type="text"
+                               class="form-control"
+                               id="inputCoats">
+                    </div>
+                </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputHeight">Room Height (inches)</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="inputHeight">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputWidth">Room Width (inches)</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="inputWidth">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputLength">Room Length (inches)</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="inputLength">
+                        </div>
+                    </div>
+                
+                <button type="submit"
+                        class="btn btn-dark">Submit</button>
+                <button type="submit"
+                        class="btn btn-dark">Add Additional Room</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+                            {{#each customers}}
+                            <option value={{id}}>{{firstName}} {{lastName}}{{id}}</option>
+                            {{/each}}
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        crossorigin="anonymous"></script>
+<script src="/js/quote.js"></script>
