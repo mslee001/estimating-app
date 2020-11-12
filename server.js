@@ -22,12 +22,12 @@ app.engine("handlebars", exphbs({
 }));
 app.set("view engine", "handlebars");
 
-// require("./controllers/product_controller.js")(app);
+require("./controllers/quote_controller.js")(app);
 require("./controllers/preparer_controller.js")(app);
 require("./controllers/customer_controller.js")(app);
 require("./controllers/main_controller")(app);
 
-db.sequelize.sync({force: true}).then(function () {
+db.sequelize.sync({force: false}).then(function () {
   app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
   });
