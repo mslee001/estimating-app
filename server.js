@@ -1,7 +1,7 @@
 const express = require("express");
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 const db = require("./models");
 
@@ -23,11 +23,11 @@ app.engine("handlebars", exphbs({
 app.set("view engine", "handlebars");
 
 // require("./controllers/product_controller.js")(app);
-// require("./controllers/review_controller.js")(app);
-// require("./controllers/cart_controller.js")(app);
-// require("./controllers/main_controller")(app);
+require("./controllers/preparer_controller.js")(app);
+require("./controllers/customer_controller.js")(app);
+require("./controllers/main_controller")(app);
 
-db.sequelize.sync({}).then(function () {
+db.sequelize.sync({force: true}).then(function () {
   app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
   });
